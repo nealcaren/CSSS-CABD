@@ -1,8 +1,64 @@
+
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
-<title>Session03-API</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>Session03-API slides</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Loading the mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<!-- Get Font-awesome from cdn -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11718,61 +11774,86 @@ ul.typeahead-list > li > a {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-body {
-  overflow: visible;
-  padding: 8px;
+.reveal {
+  font-size: 160%;
+  overflow-y: scroll;
 }
-
-div#notebook {
-  overflow: visible;
-  border-top: none;
+.reveal pre {
+  width: inherit;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
-
-@media print {
-  div.cell {
-    display: block;
-    page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
-  }
-  div.output { 
-    display: block;
-    page-break-inside: avoid; 
-  }
+.reveal pre code {
+  padding: 0px;
+}
+.reveal section img {
+  border: 0px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+.reveal i {
+  font-style: normal;
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal.fade {
+  opacity: 1;
+}
+.reveal .progress {
+  position: static;
+}
+div.input_area {
+  padding: 0.06em;
+}
+div.code_cell {
+  background-color: transparent;
+}
+div.prompt {
+  width: 11ex;
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+  text-align: right;
+}
+div.output_area pre {
+  font-family: monospace, sans-serif;
+  font-size: 80%;
+}
+div.output_prompt {
+  /* 5px right shift to account for margin in parent container */
+  margin: 5px 5px 0 0;
+}
+div.text_cell.rendered .rendered_html {
+  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
+  overflow-y: hidden;
+}
+a.anchor-link {
+  /* There is still an anchor, we are only hidding it */
+  display: none;
+}
+.rendered_html p {
+  text-align: inherit;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
-<body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+</head>
 
+
+<body>
+
+
+<div class="reveal">
+<div class="slides">
+<section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11781,7 +11862,7 @@ div#notebook {
 <h1 id="Session-3:-Harvesting-data-from-the-web:-APIs">Session 3: Harvesting data from the web: APIs<a class="anchor-link" href="#Session-3:-Harvesting-data-from-the-web:-APIs">&#182;</a></h1>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11792,18 +11873,22 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Look at the URL. What happens if you change the word slavery to abolition?</p>
-<p>What happens to the URL when you go to the second page? Can you get to page 251?</p>
+<div class="alert alert-info">
+
+Look at the URL. What happens if you change the word slavery to abolition? 
+
+What happens to the URL when you go to the second page? Can you get to page 251?
 
 </div>
 </div>
 </div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11814,7 +11899,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11824,10 +11909,10 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -11837,7 +11922,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11847,13 +11932,13 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span> <span class="o">=</span>  <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="s1">&#39;?andtext=slavery&amp;format=json&#39;</span>
 </pre></div>
 
@@ -11861,7 +11946,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11871,7 +11956,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
@@ -11884,7 +11969,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11894,7 +11979,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -11907,7 +11992,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11917,7 +12002,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
@@ -11946,7 +12031,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11956,7 +12041,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -11987,7 +12072,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11998,7 +12083,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
@@ -12029,7 +12114,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12039,7 +12124,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
@@ -12070,7 +12155,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12080,7 +12165,7 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
@@ -12111,21 +12196,21 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>While a standard CSV file has a header row that describes the contents of each column, a JSON file has keys identifying the values found in each case. Importantly, these keys need not be the same for each item. Additionally, values don't have to be numbers of strings, but could be lists or dictionaries. For example, this JSON could have included a <code>newspaper</code> key that was a dictionary with all the metadata about the newspaper the article and issue was published, an <code>article</code> key that include the article specific information as another dictionary, and a <code>text</code> key whose value was a string with the article text.</p>
-<p>As before, we can examine the contents of a particular item, such as the publication's <code>title</code>.</p>
-
+<div class="alert alert-info">
+What is the title of the first item?
 </div>
 </div>
 </div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">first_item</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
@@ -12151,20 +12236,10 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The easiest way to view or analyze this data is to convert it to a dataset-like structure. While Python does not have a builting in dataframe type, the popular <code>pandas</code> library does. By convention, it is imported as <code>pd</code>.</p>
-
-</div>
-</div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -12177,20 +12252,10 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>pandas is prety smart about importing different JSON-type objects and converting them to dataframes with its <code>.DataFrame()</code> function.</p>
-
-</div>
-</div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">search_json</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">])</span>
@@ -12207,7 +12272,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12456,7 +12521,7 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12466,7 +12531,225 @@ div#notebook {
 
 </div>
 </div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">search_json</span><span class="p">)</span>
+</pre></div>
+
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>endIndex</th>
+      <th>items</th>
+      <th>itemsPerPage</th>
+      <th>startIndex</th>
+      <th>totalItems</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [u'Columbiana', u'...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20</td>
+      <td>{u'sequence': 10, u'county': [u'Cook County'],...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20</td>
+      <td>{u'sequence': 26, u'county': [u'Cook County'],...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20</td>
+      <td>{u'sequence': 24, u'county': [u'Cook County'],...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>20</td>
+      <td>{u'sequence': 5, u'county': [u'Cook County'], ...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>20</td>
+      <td>{u'sequence': 6, u'county': [u'Cook County'], ...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>20</td>
+      <td>{u'sequence': 13, u'county': [u'Cook County'],...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [None], u'edition'...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>20</td>
+      <td>{u'sequence': 30, u'county': [u'Cook County'],...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>20</td>
+      <td>{u'sequence': 4, u'county': [None], u'edition'...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [u'Washington'], u...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>20</td>
+      <td>{u'sequence': 2, u'county': [None], u'edition'...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [u'Ottawa'], u'edi...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [u'Ashtabula'], u'...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [u'Rutland', u'Was...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>20</td>
+      <td>{u'sequence': 3, u'county': [u'Wood'], u'editi...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>20</td>
+      <td>{u'sequence': 4, u'county': [u'New York', u'Cu...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>20</td>
+      <td>{u'sequence': 10, u'county': [u'New York', u'C...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>20</td>
+      <td>{u'sequence': 1, u'county': [u'Washington'], u...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>{u'sequence': 2, u'county': [None], u'edition'...</td>
+      <td>20</td>
+      <td>1</td>
+      <td>432779</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12476,10 +12759,10 @@ div#notebook {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;lynching_articles.csv&#39;</span><span class="p">)</span>
@@ -12489,10 +12772,10 @@ div#notebook {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">!</span>head lynching_articles.csv
@@ -12533,29 +12816,20 @@ HI
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is only a small subset of the articles on lynching that are available, however. The API returns results in batches of 20 and this is only the first page of results. As is often the case, I'll need to make multiple calls to the API to retrieve all the data of interest. The easiest way to do that is to define a small function for getting the article information and put that in a loop. While it isn't a requirement that you create a function for making the API call, it will make your code easier to read and debug.</p>
-
+<div class="alert alert-info">
+Look at the API guidelines. How can we get the third page?
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Looking at the API guidelines, there is an additional paramater <code>page</code> that tells the API which subset of results we want. This name varies by API but their is usually some mechanism for retrieiving results beyond the initial JSON.</p>
-<p>Before creating the loop and making multiple calls to the API, I want to make sure that the API is working the way I think it is.</p>
-
-</div>
-</div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span>   <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="s1">&#39;?andtext=slavery&amp;format=json&amp;page=3&#39;</span>
+
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="n">parameters</span><span class="p">)</span>
 <span class="n">results</span> <span class="o">=</span>  <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
@@ -12584,21 +12858,10 @@ HI
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A call to random selected page 3 returns results 41 through 60, which is what I expected since each page has 20 items.</p>
-<p>The parameters are getting pretty ugly, so fortunately <code>requests</code> accepts a dictionary where the keys are the parameter names as defined by the API and the values are the search paramaters you are looking for. So the same request can be rewritten:</p>
-
-</div>
-</div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
@@ -12634,7 +12897,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12644,7 +12907,7 @@ HI
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
@@ -12654,12 +12917,15 @@ HI
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Make calls to the Chronicling America API.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
+    
+    <span class="n">base_url</span>   <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
     <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;andtext&#39;</span><span class="p">:</span> <span class="s1">&#39;lynching&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;page&#39;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-              <span class="s1">&#39;format&#39;</span>  <span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">}</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+                  <span class="s1">&#39;page&#39;</span>   <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                  <span class="s1">&#39;format&#39;</span> <span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">}</span>
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">)</span>
     <span class="n">results</span> <span class="o">=</span>  <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
     <span class="k">return</span> <span class="n">results</span>
 </pre></div>
 
@@ -12667,7 +12933,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
@@ -12700,7 +12966,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12710,7 +12976,7 @@ HI
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
@@ -12720,12 +12986,15 @@ HI
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Make calls to the Chronicling America API.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
+    
     <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
     <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;andtext&#39;</span><span class="p">:</span> <span class="n">search_term</span><span class="p">,</span>
-                  <span class="s1">&#39;page&#39;</span> <span class="p">:</span> <span class="n">page_number</span><span class="p">,</span>
-              <span class="s1">&#39;format&#39;</span>  <span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">}</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+                  <span class="s1">&#39;page&#39;</span>   <span class="p">:</span> <span class="n">page_number</span><span class="p">,</span>
+                  <span class="s1">&#39;format&#39;</span> <span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">}</span>
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">)</span>
     <span class="n">results</span> <span class="o">=</span>  <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
     <span class="k">return</span> <span class="n">results</span>
 </pre></div>
 
@@ -12733,7 +13002,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
@@ -12766,7 +13035,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12776,7 +13045,7 @@ HI
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
@@ -12858,7 +13127,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12868,7 +13137,7 @@ HI
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -12889,7 +13158,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12899,7 +13168,63 @@ HI
 
 </div>
 </div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Geocoding">Geocoding<a class="anchor-link" href="#Geocoding">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-info">
+
+<p>Work in groups of three!</p>
+<p>You have been handed a list of addresses. You want to geocode them.</p>
+<ol>
+<li>Read about the Google Maps Geocoding API.</li>
+<li>On paper, map out your work flow. What functions will you need?<div></li>
+</ol>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>File location:</p>
+<p><a href="https://raw.githubusercontent.com/nealcaren/CSSS-CABD/master/files/locations.csv">https://raw.githubusercontent.com/nealcaren/CSSS-CABD/master/files/locations.csv</a></p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-info">
+
+My workflow:   
+
+
+1. Use `requests` to test out a single address.    
+2. Turn that into a function that accepts a location.    
+3. Read in the CSV file with all the locations.    
+4. Store the results    
+5. Write them to a CSV.    
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12910,6 +13235,19 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -13223,12 +13561,63 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
+</div></section></section>
 </div>
-    </div>
-  </div>
-</body>
+</div>
 
- 
+<script>
+
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
+    ],
+
+    function(head, Reveal){
+
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: "reveal.js/lib/js/classList.js",
+                  condition: function() { return !document.body.classList; } },
+                { src: "reveal.js/plugin/notes/notes.js",
+                  async: true,
+                  condition: function() { return !!document.body.classList; } }
+            ]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        var update_scroll = function(event){
+          $(".reveal").scrollTop(0);
+        };
+
+        Reveal.addEventListener('slidechanged', update_scroll);
+
+    }
+);
+</script>
+
+</body>
 
 
 </html>
