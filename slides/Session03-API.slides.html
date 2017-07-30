@@ -11912,7 +11912,7 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -11935,7 +11935,7 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span>   <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
@@ -11959,7 +11959,7 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="n">parameters</span><span class="p">)</span>
@@ -11982,7 +11982,7 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">search_json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
@@ -12005,7 +12005,7 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">search_json</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -12044,7 +12044,7 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">search_json</span><span class="p">[</span><span class="s1">&#39;totalItems&#39;</span><span class="p">]</span>
@@ -12059,12 +12059,12 @@ What happens to the URL when you go to the second page? Can you get to page 251?
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>432779</pre>
+<pre>434349</pre>
 </div>
 
 </div>
@@ -12097,7 +12097,7 @@ What else is in there? Where is the stuff we want?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">search_json</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">])</span>
@@ -12138,7 +12138,7 @@ What else is in there? Where is the stuff we want?
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">search_json</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -12179,7 +12179,7 @@ What else is in there? Where is the stuff we want?
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">first_item</span> <span class="o">=</span> <span class="n">search_json</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
@@ -12221,7 +12221,7 @@ What is the title of the first item?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">first_item</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
@@ -12250,7 +12250,7 @@ What is the title of the first item?
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -12266,7 +12266,7 @@ What is the title of the first item?
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">search_json</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">])</span>
@@ -12283,7 +12283,7 @@ What is the title of the first item?
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12545,7 +12545,7 @@ What is the title of the first item?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">search_json</span><span class="p">)</span>
@@ -12560,7 +12560,7 @@ What is the title of the first item?
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12596,7 +12596,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [u'Columbiana', u'...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>1</th>
@@ -12604,7 +12604,7 @@ What is the title of the first item?
       <td>{u'sequence': 10, u'county': [u'Cook County'],...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>2</th>
@@ -12612,7 +12612,7 @@ What is the title of the first item?
       <td>{u'sequence': 26, u'county': [u'Cook County'],...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>3</th>
@@ -12620,7 +12620,7 @@ What is the title of the first item?
       <td>{u'sequence': 24, u'county': [u'Cook County'],...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>4</th>
@@ -12628,7 +12628,7 @@ What is the title of the first item?
       <td>{u'sequence': 5, u'county': [u'Cook County'], ...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>5</th>
@@ -12636,7 +12636,7 @@ What is the title of the first item?
       <td>{u'sequence': 6, u'county': [u'Cook County'], ...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>6</th>
@@ -12644,7 +12644,7 @@ What is the title of the first item?
       <td>{u'sequence': 13, u'county': [u'Cook County'],...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>7</th>
@@ -12652,7 +12652,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [None], u'edition'...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>8</th>
@@ -12660,7 +12660,7 @@ What is the title of the first item?
       <td>{u'sequence': 30, u'county': [u'Cook County'],...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>9</th>
@@ -12668,7 +12668,7 @@ What is the title of the first item?
       <td>{u'sequence': 4, u'county': [None], u'edition'...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>10</th>
@@ -12676,7 +12676,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [u'Washington'], u...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>11</th>
@@ -12684,7 +12684,7 @@ What is the title of the first item?
       <td>{u'sequence': 2, u'county': [None], u'edition'...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>12</th>
@@ -12692,7 +12692,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [u'Ottawa'], u'edi...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>13</th>
@@ -12700,7 +12700,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [u'Ashtabula'], u'...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>14</th>
@@ -12708,7 +12708,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [u'Rutland', u'Was...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>15</th>
@@ -12716,7 +12716,7 @@ What is the title of the first item?
       <td>{u'sequence': 3, u'county': [u'Wood'], u'editi...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>16</th>
@@ -12724,7 +12724,7 @@ What is the title of the first item?
       <td>{u'sequence': 4, u'county': [u'New York', u'Cu...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>17</th>
@@ -12732,7 +12732,7 @@ What is the title of the first item?
       <td>{u'sequence': 10, u'county': [u'New York', u'C...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>18</th>
@@ -12740,7 +12740,7 @@ What is the title of the first item?
       <td>{u'sequence': 1, u'county': [u'Washington'], u...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
     <tr>
       <th>19</th>
@@ -12748,7 +12748,7 @@ What is the title of the first item?
       <td>{u'sequence': 2, u'county': [None], u'edition'...</td>
       <td>20</td>
       <td>1</td>
-      <td>432779</td>
+      <td>434349</td>
     </tr>
   </tbody>
 </table>
@@ -12773,7 +12773,7 @@ What is the title of the first item?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;lynching_articles.csv&#39;</span><span class="p">)</span>
@@ -12786,7 +12786,7 @@ What is the title of the first item?
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">!</span>head lynching_articles.csv
@@ -12821,7 +12821,7 @@ HI
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12835,7 +12835,7 @@ Look at the API guidelines. How can we get the third page?
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span>   <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
@@ -12872,7 +12872,7 @@ Look at the API guidelines. How can we get the third page?
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;http://chroniclingamerica.loc.gov/search/pages/results/&#39;</span>
@@ -12921,7 +12921,7 @@ Look at the API guidelines. How can we get the third page?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_articles</span><span class="p">():</span>
@@ -12947,7 +12947,7 @@ Look at the API guidelines. How can we get the third page?
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">get_articles</span><span class="p">()</span>
@@ -12990,7 +12990,7 @@ Look at the API guidelines. How can we get the third page?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_articles</span><span class="p">(</span><span class="n">search_term</span><span class="p">,</span> <span class="n">page_number</span><span class="p">):</span>
@@ -13016,7 +13016,7 @@ Look at the API guidelines. How can we get the third page?
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">get_articles</span><span class="p">(</span><span class="s1">&#39;lynching&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -13059,7 +13059,7 @@ Look at the API guidelines. How can we get the third page?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">page_number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span> <span class="c1"># range stops before it gets to the last number</span>
@@ -13082,56 +13082,8 @@ Look at the API guidelines. How can we get the third page?
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1 20
 21 40
+41 60
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-23-f91eb7d7ca04&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">for</span> page_number <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> <span class="ansi-red-fg"># range stops before it gets to the last number</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg">     </span>results <span class="ansi-blue-fg">=</span> get_articles<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;lynching&#39;</span><span class="ansi-blue-fg">,</span> page_number<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">print</span> results<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;startIndex&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> results<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;endIndex&#39;</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> 
-
-<span class="ansi-green-fg">&lt;ipython-input-21-a0c2e842808e&gt;</span> in <span class="ansi-cyan-fg">get_articles</span><span class="ansi-blue-fg">(search_term, page_number)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span>               &#39;format&#39;  : &#39;json&#39;}
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     r <span class="ansi-blue-fg">=</span> requests<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>base_url<span class="ansi-blue-fg">,</span> params<span class="ansi-blue-fg">=</span>parameters<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg">     </span>results <span class="ansi-blue-fg">=</span>  r<span class="ansi-blue-fg">.</span>json<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span>     <span class="ansi-green-fg">return</span> results
-
-<span class="ansi-green-fg">//anaconda/lib/python2.7/site-packages/requests/models.pyc</span> in <span class="ansi-cyan-fg">json</span><span class="ansi-blue-fg">(self, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    875</span>                 <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    876</span>                     return complexjson.loads(
-<span class="ansi-green-fg">--&gt; 877</span><span class="ansi-red-fg">                         </span>self<span class="ansi-blue-fg">.</span>content<span class="ansi-blue-fg">.</span>decode<span class="ansi-blue-fg">(</span>encoding<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs
-<span class="ansi-green-intense-fg ansi-bold">    878</span>                     )
-<span class="ansi-green-intense-fg ansi-bold">    879</span>                 <span class="ansi-green-fg">except</span> UnicodeDecodeError<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">//anaconda/lib/python2.7/site-packages/simplejson/__init__.pyc</span> in <span class="ansi-cyan-fg">loads</span><span class="ansi-blue-fg">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, use_decimal, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    514</span>             parse_constant <span class="ansi-green-fg">is</span> None <span class="ansi-green-fg">and</span> object_pairs_hook <span class="ansi-green-fg">is</span> None
-<span class="ansi-green-intense-fg ansi-bold">    515</span>             and not use_decimal and not kw):
-<span class="ansi-green-fg">--&gt; 516</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> _default_decoder<span class="ansi-blue-fg">.</span>decode<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    517</span>     <span class="ansi-green-fg">if</span> cls <span class="ansi-green-fg">is</span> None<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    518</span>         cls <span class="ansi-blue-fg">=</span> JSONDecoder
-
-<span class="ansi-green-fg">//anaconda/lib/python2.7/site-packages/simplejson/decoder.pyc</span> in <span class="ansi-cyan-fg">decode</span><span class="ansi-blue-fg">(self, s, _w, _PY3)</span>
-<span class="ansi-green-intense-fg ansi-bold">    372</span>         <span class="ansi-green-fg">if</span> _PY3 <span class="ansi-green-fg">and</span> isinstance<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">,</span> binary_type<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    373</span>             s <span class="ansi-blue-fg">=</span> s<span class="ansi-blue-fg">.</span>decode<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>encoding<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 374</span><span class="ansi-red-fg">         </span>obj<span class="ansi-blue-fg">,</span> end <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>raw_decode<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    375</span>         end <span class="ansi-blue-fg">=</span> _w<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">,</span> end<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>end<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    376</span>         <span class="ansi-green-fg">if</span> end <span class="ansi-blue-fg">!=</span> len<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">//anaconda/lib/python2.7/site-packages/simplejson/decoder.pyc</span> in <span class="ansi-cyan-fg">raw_decode</span><span class="ansi-blue-fg">(self, s, idx, _w, _PY3)</span>
-<span class="ansi-green-intense-fg ansi-bold">    402</span>             <span class="ansi-green-fg">elif</span> ord0 <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0xef</span> <span class="ansi-green-fg">and</span> s<span class="ansi-blue-fg">[</span>idx<span class="ansi-blue-fg">:</span>idx <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;\xef\xbb\xbf&#39;</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    403</span>                 idx <span class="ansi-blue-fg">+=</span> <span class="ansi-cyan-fg">3</span>
-<span class="ansi-green-fg">--&gt; 404</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>scan_once<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">,</span> idx<span class="ansi-blue-fg">=</span>_w<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">,</span> idx<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>end<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
 </div>
 </div>
 
@@ -13151,21 +13103,253 @@ Look at the API guidelines. How can we get the third page?
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> <span class="c1"># empty dataframe to store results</span>
 
 <span class="k">for</span> <span class="n">page_number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
     <span class="n">results</span> <span class="o">=</span> <span class="n">get_articles</span><span class="p">(</span><span class="s1">&#39;lynching&#39;</span><span class="p">,</span> <span class="n">page_number</span><span class="p">)</span>
     <span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">])</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_df</span> <span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_df</span> <span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># otherwise, index would be 0-20 3x</span>
     
 <span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>60
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>alt_title</th>
+      <th>batch</th>
+      <th>city</th>
+      <th>country</th>
+      <th>county</th>
+      <th>date</th>
+      <th>edition</th>
+      <th>edition_label</th>
+      <th>end_year</th>
+      <th>frequency</th>
+      <th>id</th>
+      <th>language</th>
+      <th>lccn</th>
+      <th>note</th>
+      <th>ocr_eng</th>
+      <th>page</th>
+      <th>place</th>
+      <th>place_of_publication</th>
+      <th>publisher</th>
+      <th>section_label</th>
+      <th>sequence</th>
+      <th>start_year</th>
+      <th>state</th>
+      <th>subject</th>
+      <th>title</th>
+      <th>title_normal</th>
+      <th>type</th>
+      <th>url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[]</td>
+      <td>batch_mimtptc_jackson_ver01</td>
+      <td>[Dearborn]</td>
+      <td>Michigan</td>
+      <td>[Wayne]</td>
+      <td>19211022</td>
+      <td>None</td>
+      <td></td>
+      <td>1927</td>
+      <td>Weekly</td>
+      <td>/lccn/2013218776/1921-10-22/ed-1/seq-1/</td>
+      <td>[English]</td>
+      <td>2013218776</td>
+      <td>["The Ford international weekly" appears with ...</td>
+      <td>"Mis-Picturing Us Abroad" Introduces the Serie...</td>
+      <td></td>
+      <td>[Michigan--Wayne--Dearborn]</td>
+      <td>Dearborn, Mich.</td>
+      <td>Suburban Pub. Co.</td>
+      <td></td>
+      <td>1</td>
+      <td>1901</td>
+      <td>[Michigan]</td>
+      <td>[Dearborn (Mich.)--Newspapers., Michigan--Dear...</td>
+      <td>Dearborn independent.</td>
+      <td>dearborn independent.</td>
+      <td>page</td>
+      <td>http://chroniclingamerica.loc.gov/lccn/2013218...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>[]</td>
+      <td>batch_iune_hotel_ver01</td>
+      <td>[Chicago]</td>
+      <td>Illinois</td>
+      <td>[Cook County]</td>
+      <td>19150818</td>
+      <td>None</td>
+      <td>LAST EDITION</td>
+      <td>1917</td>
+      <td>Daily (except Sunday and holidays)</td>
+      <td>/lccn/sn83045487/1915-08-18/ed-1/seq-4/</td>
+      <td>[English]</td>
+      <td>sn83045487</td>
+      <td>["An adless daily newspaper.", Archived issues...</td>
+      <td>25 patriots who took into their own\nhands a l...</td>
+      <td></td>
+      <td>[Illinois--Cook County--Chicago]</td>
+      <td>Chicago, Ill.</td>
+      <td>N.D. Cochran</td>
+      <td></td>
+      <td>4</td>
+      <td>1911</td>
+      <td>[Illinois]</td>
+      <td>[Chicago (Ill.)--Newspapers., Illinois--Chicag...</td>
+      <td>The day book.</td>
+      <td>day book.</td>
+      <td>page</td>
+      <td>http://chroniclingamerica.loc.gov/lccn/sn83045...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[Saint Paul tidende]</td>
+      <td>batch_mnhi_gemma_ver01</td>
+      <td>[Saint Paul]</td>
+      <td>Minnesota</td>
+      <td>[Ramsey]</td>
+      <td>19160310</td>
+      <td>None</td>
+      <td></td>
+      <td>1928</td>
+      <td>Weekly</td>
+      <td>/lccn/sn90059649/1916-03-10/ed-1/seq-4/</td>
+      <td>[Danish]</td>
+      <td>sn90059649</td>
+      <td>[Available on microfilm from the Minnesota His...</td>
+      <td>}'i» Room 201 Court Six#, St. Paul, fflinn.\nB...</td>
+      <td></td>
+      <td>[Minnesota--Ramsey--Saint Paul]</td>
+      <td>St. Paul, Minn.</td>
+      <td>C. Rasmussen Pub. Co.</td>
+      <td></td>
+      <td>4</td>
+      <td>1902</td>
+      <td>[Minnesota]</td>
+      <td>[Danes--Minnesota--Newspapers., Danes.--fast--...</td>
+      <td>St. Paul tidende.</td>
+      <td>st. paul tidende.</td>
+      <td>page</td>
+      <td>http://chroniclingamerica.loc.gov/lccn/sn90059...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[Saint Paul tidende]</td>
+      <td>batch_mnhi_gemma_ver01</td>
+      <td>[Saint Paul]</td>
+      <td>Minnesota</td>
+      <td>[Ramsey]</td>
+      <td>19091119</td>
+      <td>None</td>
+      <td></td>
+      <td>1928</td>
+      <td>Weekly</td>
+      <td>/lccn/sn90059649/1909-11-19/ed-1/seq-5/</td>
+      <td>[Danish]</td>
+      <td>sn90059649</td>
+      <td>[Available on microfilm from the Minnesota His...</td>
+      <td>November 1909.\nLynching i Illinois.\nMinnesot...</td>
+      <td></td>
+      <td>[Minnesota--Ramsey--Saint Paul]</td>
+      <td>St. Paul, Minn.</td>
+      <td>C. Rasmussen Pub. Co.</td>
+      <td></td>
+      <td>5</td>
+      <td>1902</td>
+      <td>[Minnesota]</td>
+      <td>[Danes--Minnesota--Newspapers., Danes.--fast--...</td>
+      <td>St. Paul tidende.</td>
+      <td>st. paul tidende.</td>
+      <td>page</td>
+      <td>http://chroniclingamerica.loc.gov/lccn/sn90059...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>[Star, Sunday star]</td>
+      <td>batch_dlc_dalek_ver01</td>
+      <td>[Washington]</td>
+      <td>District of Columbia</td>
+      <td>[None]</td>
+      <td>19221123</td>
+      <td>None</td>
+      <td></td>
+      <td>1972</td>
+      <td>Daily</td>
+      <td>/lccn/sn83045462/1922-11-23/ed-1/seq-34/</td>
+      <td>[English]</td>
+      <td>sn83045462</td>
+      <td>["From April 25 through May 24, 1861 one sheet...</td>
+      <td>T\nTU^\nnit;\n- V E\nxl\nII\nb&lt;\nin rour\n3436...</td>
+      <td>34</td>
+      <td>[District of Columbia--Washington]</td>
+      <td>Washington, D.C.</td>
+      <td>W.D. Wallach &amp; Hope</td>
+      <td></td>
+      <td>34</td>
+      <td>1854</td>
+      <td>[District of Columbia]</td>
+      <td>[Washington (D.C.)--fast--(OCoLC)fst01204505, ...</td>
+      <td>Evening star.</td>
+      <td>evening star.</td>
+      <td>page</td>
+      <td>http://chroniclingamerica.loc.gov/lccn/sn83045...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13185,28 +13369,19 @@ Look at the API guidelines. How can we get the third page?
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Geocoding">Geocoding<a class="anchor-link" href="#Geocoding">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <div class="alert alert-info">
+<h1> Geocoding</h1>
 
 Work in groups of three!
-
+<p>
 You have been handed a list of addresses. You want to geocode them. 
+<p>Read about the Google Maps Geocoding API.
+<p>On paper, map out your work flow. What functions will you need?
 
-
-1. Read about the Google Maps Geocoding API.
-2. On paper, map out your work flow. What functions will you need?
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -13217,7 +13392,7 @@ You have been handed a list of addresses. You want to geocode them.
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -13242,40 +13417,27 @@ My workflow:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A-second-API">A second API<a class="anchor-link" href="#A-second-API">&#182;</a></h3><p>While the Chronicling America API allows annonymous usage, most APIs require you to register in advance. This usually involves going to their website, signing up for the service, and then going through a second signup for developers.<br>
-When you sign up  to use an API, you usually agree to only use the API to facilitate other people using the service (e.g. customer's finding their way to your store) and that you won't store the data. API providers usually enforce this through rate limiting, meaning you can only access the service so many times per minute or per day. For example, you can only search status updates 180 times every 15 minutes according to <a href="https://dev.twitter.com/docs/rate-limiting/1.1/limits">Twitter guidelines</a>. <a href="http://www.yelp.com/developers/documentation/faq">Yelp</a> limits you to 10,000 calls per day. If you go over your limit, you won't be able to access the service for a bit. You will also get in trouble if you redistribute the data, so don't plan on doing that.</p>
+<h3 id="A-third-API">A third API<a class="anchor-link" href="#A-third-API">&#182;</a></h3><p>While the Chronicling America API allows annonymous usage, most APIs require you to register in advance. This usually involves going to their website, signing up for the service, and then going through a second signup for developers.</p>
+<p>When you sign up  to use an API, you usually agree to only use the API to facilitate other people using the service (e.g. customer's finding their way to your store) and that you won't store the data. API providers usually enforce this through rate limiting, meaning you can only access the service so many times per minute or per day. For example, you can only search status updates 180 times every 15 minutes according to <a href="https://dev.twitter.com/docs/rate-limiting/1.1/limits">Twitter guidelines</a>. <a href="http://www.yelp.com/developers/documentation/faq">Yelp</a> limits you to 10,000 calls per day. If you go over your limit, you won't be able to access the service for a bit. You will also get in trouble if you redistribute the data, so don't plan on doing that.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Two of the major reasons that web services require API authentication is so that they know who you are and so they can make sure that you don't go over their rate limits. Since you shouldn't be giving your password to random people on the internet, API authentication works a little bit differently. Like many other places, in order to use the Yelp API you have to sign up as <a href="http://www.yelp.com/developers">developer</a>. After telling them a little bit about what you plan to do--feel free to be honest; they aren't going to deny you access if you put "research on food cultures" as the purpose--you will get a Consumer Key, Consumer Secret, Token, and Token Secret. Copy and paste them somewhere special.</p>
+<p>Like many other places, in order to use the Yelp API you have to sign up as <a href="http://www.yelp.com/developers">developer</a>. After telling them a little bit about what you plan to do--feel free to be honest; they aren't going to deny you access if you put "research on food cultures" as the purpose--you will get a <em>Consumer Key</em>, <em>Consumer Secret</em>, <em>Token</em>, and <em>Token Secret</em>. Copy and paste them somewhere special.</p>
 <p>Using the Yelp API goes something like this. First, you tell Yelp who you are and what you want. Assuming you are authorized to have this information, they respond with a URL where you can retrieve the data. The coding for this in practice is a little bit complicated, so there are often single use tools for accessing APIs, like <a href="http://tweepy.github.io">Tweepy</a> for Twitter.</p>
 <p>Yelp uses the OAuth protocol for authentication. There are several python libraries for handling this, but you will likely need to install one (via <code>conda</code> or <code>pip</code>) yourself first.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">oauth2</span>
@@ -13285,20 +13447,10 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There's no module to install for the Yelp API, but Yelp does provide some <a href="https://github.com/Yelp/yelp-api/tree/master/v2/python">sample Python code</a>. I've slightly modified the code below to show a sample search for restaurants near Chapel Hill, NC, sorted by distance. You can find more options in the search <a href="http://www.yelp.com/developers/documentation/v2/search_api">documentation</a>. The API's search options include things like location and type of business, and allows you to sort either by distance or popularity.</p>
-
-</div>
-</div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">consumer_key</span>    <span class="o">=</span> <span class="s1">&#39;qDBPo9c_szHVrZwxzo-zDw&#39;</span>
@@ -13307,13 +13459,26 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 <span class="n">token_secret</span>    <span class="o">=</span> <span class="s1">&#39;n-7xHNCxxedmAMYZPQtnh1hd7lI&#39;</span>
 
 <span class="n">consumer</span> <span class="o">=</span> <span class="n">oauth2</span><span class="o">.</span><span class="n">Consumer</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>
+</pre></div>
 
-<span class="n">category_filter</span> <span class="o">=</span> <span class="s1">&#39;restaurants&#39;</span>
-<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;Oslo, Norway&#39;</span>
-<span class="n">options</span> <span class="o">=</span>  <span class="s1">&#39;category_filter=</span><span class="si">%s</span><span class="s1">&amp;location=</span><span class="si">%s</span><span class="s1">&amp;sort=1&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">category_filter</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.yelp.com/v2/search?&#39;</span> <span class="o">+</span> <span class="n">options</span>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">category_filter</span> <span class="o">=</span> <span class="s1">&#39;restaurants&#39;</span>
+<span class="n">location</span>        <span class="o">=</span> <span class="s1">&#39;Oslo, Norway&#39;</span>
+
+<span class="n">options</span>         <span class="o">=</span>  <span class="s1">&#39;category_filter=</span><span class="si">%s</span><span class="s1">&amp;location=</span><span class="si">%s</span><span class="s1">&amp;sort=1&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">category_filter</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
+<span class="n">url</span>             <span class="o">=</span> <span class="s1">&#39;http://api.yelp.com/v2/search?&#39;</span> <span class="o">+</span> <span class="n">options</span>
 
 <span class="n">oauth_request</span> <span class="o">=</span> <span class="n">oauth2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="p">{})</span>
+
 <span class="n">oauth_request</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;oauth_nonce&#39;</span>      <span class="p">:</span> <span class="n">oauth2</span><span class="o">.</span><span class="n">generate_nonce</span><span class="p">(),</span>
                       <span class="s1">&#39;oauth_timestamp&#39;</span>  <span class="p">:</span> <span class="n">oauth2</span><span class="o">.</span><span class="n">generate_timestamp</span><span class="p">(),</span>
                       <span class="s1">&#39;oauth_token&#39;</span>       <span class="p">:</span> <span class="n">token</span><span class="p">,</span>
@@ -13330,94 +13495,168 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>http://api.yelp.com/v2/search?sort=1&amp;oauth_body_hash=2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D&amp;oauth_nonce=13853216&amp;oauth_timestamp=1501417028&amp;oauth_consumer_key=qDBPo9c_szHVrZwxzo-zDw&amp;oauth_signature_method=HMAC-SHA1&amp;category_filter=restaurants&amp;oauth_token=jeRrhRey_k-emvC_VFLGrlVHrkR4P3UF&amp;location=Oslo%2C+Norway&amp;oauth_signature=we0CxC12Un504SHisw3Pk0xJBp8%3D
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The URL returned expires after a couple of seconds, so don't expect for the above link to work. The results are provided in the JSON file format, so I'm going to use the already imported <code>requests</code> module to download them.</p>
 
 </div>
 </div>
-</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">signed_url</span><span class="p">)</span>
-<span class="n">chapel_hill_restaurants</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">oslo_restaurants</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
-<span class="k">print</span> <span class="n">chapel_hill_restaurants</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">oslo_restaurants</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[u&#39;region&#39;, u&#39;total&#39;, u&#39;businesses&#39;]
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>As with the Chronacling America API, the top level of the JSON contains some metadata about the search with all the specific items in one field. In this case, <code>businesses</code>.</p>
 
 </div>
 </div>
-</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">chapel_hill_restaurants</span><span class="p">[</span><span class="s1">&#39;businesses&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">oslo_restaurants</span><span class="p">[</span><span class="s1">&#39;businesses&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[33]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{u&#39;categories&#39;: [[u&#39;Scandinavian&#39;, u&#39;scandinavian&#39;]],
+ u&#39;display_phone&#39;: u&#39;+47 22 69 60 00&#39;,
+ u&#39;id&#39;: u&#39;smalhans-oslo&#39;,
+ u&#39;image_url&#39;: u&#39;https://s3-media1.fl.yelpcdn.com/bphoto/5QT795Zc4TcUl8ue-iA-Og/ms.jpg&#39;,
+ u&#39;is_claimed&#39;: True,
+ u&#39;is_closed&#39;: False,
+ u&#39;location&#39;: {u&#39;address&#39;: [u&#39;Waldemar Thranes gate 10&#39;],
+  u&#39;city&#39;: u&#39;Oslo&#39;,
+  u&#39;coordinate&#39;: {u&#39;latitude&#39;: 59.9235229, u&#39;longitude&#39;: 10.7395983},
+  u&#39;country_code&#39;: u&#39;NO&#39;,
+  u&#39;display_address&#39;: [u&#39;Waldemar Thranes gate 10&#39;,
+   u&#39;St. Hanshaugen&#39;,
+   u&#39;0171 Oslo&#39;,
+   u&#39;Norway&#39;],
+  u&#39;geo_accuracy&#39;: 8.0,
+  u&#39;neighborhoods&#39;: [u&#39;St. Hanshaugen&#39;, u&#39;Bislett&#39;],
+  u&#39;postal_code&#39;: u&#39;0171&#39;,
+  u&#39;state_code&#39;: u&#39;03&#39;},
+ u&#39;mobile_url&#39;: u&#39;https://m.yelp.com/biz/smalhans-oslo?adjust_creative=qDBPo9c_szHVrZwxzo-zDw&amp;utm_campaign=yelp_api&amp;utm_medium=api_v2_search&amp;utm_source=qDBPo9c_szHVrZwxzo-zDw&#39;,
+ u&#39;name&#39;: u&#39;Smalhans&#39;,
+ u&#39;phone&#39;: u&#39;+4722696000&#39;,
+ u&#39;rating&#39;: 4.0,
+ u&#39;rating_img_url&#39;: u&#39;https://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png&#39;,
+ u&#39;rating_img_url_large&#39;: u&#39;https://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png&#39;,
+ u&#39;rating_img_url_small&#39;: u&#39;https://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png&#39;,
+ u&#39;review_count&#39;: 39,
+ u&#39;snippet_image_url&#39;: u&#39;https://s3-media2.fl.yelpcdn.com/photo/CxQBlSGNnDqFmCu9rOUgnA/ms.jpg&#39;,
+ u&#39;snippet_text&#39;: u&#34;My wife and I made this our first culinary stop on our 7 day Norway trip and it didn&#39;t disappoint. The reason I chose it was it was the least stodgy...&#34;,
+ u&#39;url&#39;: u&#39;https://www.yelp.com/biz/smalhans-oslo?adjust_creative=qDBPo9c_szHVrZwxzo-zDw&amp;utm_campaign=yelp_api&amp;utm_medium=api_v2_search&amp;utm_source=qDBPo9c_szHVrZwxzo-zDw&#39;}</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Inspecting the returned results for one restaraunt, it is clear that Yelp is keeping a lot of the review data for themselves. They returned the overall restaurant <code>rating</code>, but they provide only a small bit of text (<code>snippet_text</code>) instead of the full reviews and ratings.</p>
 
 </div>
 </div>
-</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">chapel_hill_restaurants</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
-<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">chapel_hill_restaurants</span><span class="p">[</span><span class="s1">&#39;businesses&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">oslo_restaurants</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">oslo_restaurants</span><span class="p">[</span><span class="s1">&#39;businesses&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>40
+20
+</pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Additionally, they cap the total number of business the search will return at 40 and only provide 20 results for each API call.</p>
-<p>Even with these restrictions, it still might be useful for social science research. As before, you would likely want to define a function in order to make repeated calls to the API. In this, the easier solution might be to create two functions. One that gets a single page and another which retrieves both pages for a single geographical area by calling the first function twice. While it would be possible to do this with zero or one new functions, creating two functions allows for better control over finding and debugging errors since you can test each function independently. Creating lots of small functions generally the code more readable, especially in case like this where you are looping over pages within restaurants within geographic areas. In general, I think the principle of a workflow consisting of small functions, as is commonly found in Python code, is something that social scientists should adopt even when they aren't writing Python.</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Even with these restrictions, it still might be useful for social science research. As before, you would likely want to define a function in order to make repeated calls to the API. In this, the easier solution might be to create two functions. One that gets a single page and another which retrieves both pages for a single geographical area by calling the first function twice. While it would be possible to do this with zero or one new functions, creating two functions allows for better control over finding and debugging errors since you can test each function independently. Creating lots of small functions generally the code more readable, especially in case like this where you are looping over pages within restaurants within geographic areas. In general, I think the principle of a workflow consisting of small functions, as is commonly found in Python code, is something that social scientists should adopt even when they aren't writing Python.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_yelp_page</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
@@ -13466,10 +13705,10 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ch_df</span> <span class="o">=</span> <span class="n">get_yelp_results</span><span class="p">(</span><span class="s1">&#39;Chapel Hill, NC&#39;</span><span class="p">)</span>
@@ -13481,10 +13720,26 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>40
+</pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ch_df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -13494,10 +13749,33 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[37]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Index([u&#39;categories&#39;, u&#39;display_phone&#39;, u&#39;id&#39;, u&#39;image_url&#39;, u&#39;is_claimed&#39;,
+       u&#39;is_closed&#39;, u&#39;location&#39;, u&#39;menu_date_updated&#39;, u&#39;menu_provider&#39;,
+       u&#39;mobile_url&#39;, u&#39;name&#39;, u&#39;phone&#39;, u&#39;rating&#39;, u&#39;rating_img_url&#39;,
+       u&#39;rating_img_url_large&#39;, u&#39;rating_img_url_small&#39;, u&#39;review_count&#39;,
+       u&#39;snippet_image_url&#39;, u&#39;snippet_text&#39;, u&#39;url&#39;],
+      dtype=&#39;object&#39;)</pre>
 </div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ch_df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;categories&#39;</span><span class="p">,</span><span class="s1">&#39;review_count&#39;</span><span class="p">,</span><span class="s1">&#39;rating&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
@@ -13507,59 +13785,692 @@ When you sign up  to use an API, you usually agree to only use the API to facili
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[38]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>categories</th>
+      <th>review_count</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>George's Seafood Jumbo</td>
+      <td>[[Seafood, seafood]]</td>
+      <td>1</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>The Purple Bowl</td>
+      <td>[[Breakfast &amp; Brunch, breakfast_brunch], [Acai...</td>
+      <td>8</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Mediterranean Deli</td>
+      <td>[[Greek, greek], [Mediterranean, mediterranean...</td>
+      <td>607</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Imbibe</td>
+      <td>[[American (New), newamerican], [Wine Bars, wi...</td>
+      <td>27</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Sutton's Drug Store</td>
+      <td>[[Burgers, burgers], [Sandwiches, sandwiches],...</td>
+      <td>103</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>1.5.0. Fresh</td>
+      <td>[[American (New), newamerican]]</td>
+      <td>2</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Cholanad</td>
+      <td>[[Indian, indpak], [Vegan, vegan]]</td>
+      <td>261</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Cosmic Cantina</td>
+      <td>[[Tex-Mex, tex-mex], [Tacos, tacos], [Beer Bar...</td>
+      <td>103</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>R &amp; R Grill</td>
+      <td>[[American (Traditional), tradamerican], [Burg...</td>
+      <td>93</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Crepe Traditions</td>
+      <td>[[Creperies, creperies], [Coffee &amp; Tea, coffee...</td>
+      <td>43</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Cuban Revolution Express</td>
+      <td>[[Cuban, cuban]]</td>
+      <td>22</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>TRU Deli &amp; Wine</td>
+      <td>[[Delis, delis], [Sandwiches, sandwiches], [Co...</td>
+      <td>106</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Bandido's Mexican Cafe</td>
+      <td>[[Mexican, mexican]]</td>
+      <td>79</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Sandwhich</td>
+      <td>[[Sandwiches, sandwiches], [American (New), ne...</td>
+      <td>238</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Roots</td>
+      <td>[[Breakfast &amp; Brunch, breakfast_brunch], [New ...</td>
+      <td>51</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ms. Mong</td>
+      <td>[[Mongolian, mongolian], [Asian Fusion, asianf...</td>
+      <td>122</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Grk Yeero</td>
+      <td>[[Mediterranean, mediterranean], [Greek, greek]]</td>
+      <td>14</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Buns</td>
+      <td>[[Burgers, burgers], [Hot Dogs, hotdog]]</td>
+      <td>293</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Lime and Basil</td>
+      <td>[[Vietnamese, vietnamese]]</td>
+      <td>197</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Sawasdee Thai Restaurant</td>
+      <td>[[Japanese, japanese], [Thai, thai]]</td>
+      <td>37</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Vespa Ristorante</td>
+      <td>[[Italian, italian], [Wine Bars, wine_bars]]</td>
+      <td>106</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Toppers Pizza</td>
+      <td>[[Chicken Wings, chicken_wings], [Pizza, pizza]]</td>
+      <td>39</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Mellow Mushroom</td>
+      <td>[[Pizza, pizza], [Sandwiches, sandwiches], [Ba...</td>
+      <td>66</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Spicy 9 Sushi Bar &amp; Asian Restaurant</td>
+      <td>[[Sushi Bars, sushi], [Asian Fusion, asianfusi...</td>
+      <td>145</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Crossroads Chapel Hill</td>
+      <td>[[American (New), newamerican], [Breakfast &amp; B...</td>
+      <td>89</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>411 West Italian Cafe</td>
+      <td>[[Italian, italian], [Breakfast &amp; Brunch, brea...</td>
+      <td>213</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Kurama Sushi &amp; Noodle Express</td>
+      <td>[[Sushi Bars, sushi], [Noodles, noodles]]</td>
+      <td>87</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ye Olde Waffle Shoppe</td>
+      <td>[[Waffles, waffles]]</td>
+      <td>129</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Spanky's Restaurant</td>
+      <td>[[American (Traditional), tradamerican], [Brea...</td>
+      <td>101</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Top of the Hill Restaurant &amp; Brewery</td>
+      <td>[[American (Traditional), tradamerican], [Sand...</td>
+      <td>481</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Sup Dogs</td>
+      <td>[[American (New), newamerican], [Hot Dogs, hot...</td>
+      <td>83</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Benny Cappella's</td>
+      <td>[[Pizza, pizza], [Bars, bars]]</td>
+      <td>16</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Shanghai Dumplings</td>
+      <td>[[Shanghainese, shanghainese]]</td>
+      <td>92</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Artisan Pizza Kitchen</td>
+      <td>[[Pizza, pizza], [Burgers, burgers], [Sandwich...</td>
+      <td>70</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Joe's Joint</td>
+      <td>[[Burgers, burgers], [American (New), newameri...</td>
+      <td>22</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>La Residence</td>
+      <td>[[American (New), newamerican], [Venues &amp; Even...</td>
+      <td>30</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Might As Well Bar &amp; Grill</td>
+      <td>[[American (Traditional), tradamerican], [Pizz...</td>
+      <td>5</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>B SKI'S - The Wrap  Redefined</td>
+      <td>[[Fast Food, hotdogs], [Sandwiches, sandwiches...</td>
+      <td>83</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Time-Out Restaurant</td>
+      <td>[[Southern, southern]]</td>
+      <td>51</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Old Chicago Pizza &amp; Taproom</td>
+      <td>[[Pizza, pizza], [American (Traditional), trad...</td>
+      <td>113</td>
+      <td>2.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">oslo_df</span> <span class="o">=</span> <span class="n">get_yelp_results</span><span class="p">(</span><span class="s1">&#39;Oslo, Norway&#39;</span><span class="p">)</span>
+<span class="n">oslo_df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;categories&#39;</span><span class="p">,</span><span class="s1">&#39;review_count&#39;</span><span class="p">,</span><span class="s1">&#39;rating&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[40]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>categories</th>
+      <th>review_count</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>20</th>
+      <td>Pila</td>
+      <td>[[Cafes, cafes], [Scandinavian, scandinavian],...</td>
+      <td>6</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Happolati</td>
+      <td>[[Asian Fusion, asianfusion]]</td>
+      <td>6</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Stangeriet</td>
+      <td>[[Sandwiches, sandwiches], [Meat Shops, meats]]</td>
+      <td>10</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Arakataka</td>
+      <td>[[Modern European, modern_european]]</td>
+      <td>23</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Nøkken</td>
+      <td>[[Scandinavian, scandinavian]]</td>
+      <td>13</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Restaurant Fjord</td>
+      <td>[[Seafood, seafood]]</td>
+      <td>16</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Crêperie de Mari</td>
+      <td>[[Creperies, creperies]]</td>
+      <td>30</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Meatballs</td>
+      <td>[[Fast Food, hotdogs]]</td>
+      <td>28</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Kamai</td>
+      <td>[[Sushi Bars, sushi], [Asian Fusion, asianfusi...</td>
+      <td>21</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Way Down South</td>
+      <td>[[American (Traditional), tradamerican], [Barb...</td>
+      <td>14</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Restaurant Kontrast</td>
+      <td>[[Gastropubs, gastropubs], [Scandinavian, scan...</td>
+      <td>10</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Syverkiosken</td>
+      <td>[[Hot Dogs, hotdog], [Street Vendors, streetve...</td>
+      <td>13</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>The Kasbah</td>
+      <td>[[Middle Eastern, mideastern], [Gluten-Free, g...</td>
+      <td>64</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Den Glade Gris</td>
+      <td>[[Traditional Norwegian, norwegian], [Gastropu...</td>
+      <td>67</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Tim Wendelboe</td>
+      <td>[[Cafes, cafes], [Coffee &amp; Tea, coffee]]</td>
+      <td>92</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Pjoltergeist</td>
+      <td>[[Asian Fusion, asianfusion], [Bars, bars]]</td>
+      <td>13</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Poke Bowl Oslo</td>
+      <td>[[Fast Food, hotdogs], [Seafood, seafood], [Ha...</td>
+      <td>9</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Izakaya</td>
+      <td>[[Japanese, japanese], [Bars, bars]]</td>
+      <td>41</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Café Tekehtopa</td>
+      <td>[[Scandinavian, scandinavian]]</td>
+      <td>24</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Freddy Fuego</td>
+      <td>[[Mexican, mexican]]</td>
+      <td>31</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Ostebutikken</td>
+      <td>[[Restaurants, restaurants], [Delicatessen, de...</td>
+      <td>10</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Døgnvill Bar &amp; Burger</td>
+      <td>[[Burgers, burgers], [Bars, bars]]</td>
+      <td>130</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lucky Bird</td>
+      <td>[[American (Traditional), tradamerican], [Soul...</td>
+      <td>38</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Café Sara</td>
+      <td>[[Modern European, modern_european], [Mexican,...</td>
+      <td>56</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Bon Lìo</td>
+      <td>[[Spanish, spanish], [Gastropubs, gastropubs]]</td>
+      <td>8</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Mathallen Oslo</td>
+      <td>[[Food Stands, foodstands], [Specialty Food, g...</td>
+      <td>90</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Sapporo Ramenbar</td>
+      <td>[[Ramen, ramen]]</td>
+      <td>13</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>St. Lars</td>
+      <td>[[Barbeque, bbq], [Burgers, burgers]]</td>
+      <td>20</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Vulkanfisk</td>
+      <td>[[Seafood, seafood], [Fish &amp; Chips, fishnchips...</td>
+      <td>13</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>La Sangria</td>
+      <td>[[Spanish, spanish], [Tapas/Small Plates, tapa...</td>
+      <td>12</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>East Kitchen</td>
+      <td>[[Asian Fusion, asianfusion], [Chinese, chines...</td>
+      <td>33</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Revolver</td>
+      <td>[[Restaurants, restaurants], [Music Venues, mu...</td>
+      <td>20</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Monsun Noodlebar</td>
+      <td>[[Asian Fusion, asianfusion], [Vegan, vegan], ...</td>
+      <td>22</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Fuglen</td>
+      <td>[[Cafes, cafes], [Coffee &amp; Tea, coffee], [Cock...</td>
+      <td>62</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Sushi &amp; Dinner</td>
+      <td>[[Sushi Bars, sushi], [Japanese, japanese], [A...</td>
+      <td>17</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Eldhuset</td>
+      <td>[[American (Traditional), tradamerican], [Barb...</td>
+      <td>24</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Villa Paradiso Grünerløkka</td>
+      <td>[[Italian, italian], [Pizza, pizza]]</td>
+      <td>97</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Colonel Mustard</td>
+      <td>[[Burgers, burgers], [Pubs, pubs]]</td>
+      <td>48</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Smalhans</td>
+      <td>[[Scandinavian, scandinavian]]</td>
+      <td>39</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Tullins Café</td>
+      <td>[[Wok, wok], [Pizza, pizza], [Pubs, pubs]]</td>
+      <td>37</td>
+      <td>3.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The function expects that the first thing you input will be a location. Taking advantage of both <code>oath2</code>'s ability to clean up the text so that it is functional when put in a URL (e.g., escape spaces) and Yelp's savvy ability to parse locations, the value for location can be fairly wide (e.g., "Chapel Hill" or "90210"). You can also add a category of business to search for from the <a href="http://www.yelp.com/developers/documentation/category_list">list</a> of acceptable values. If you don't provide a value, <code>category_filter = 'restaurants'</code> provides a default value of 'restaurants'. This function returns the JSON formatted results. Note that this doesn't have any mechanism for handling errors, which will need to happen elsewhere.</p>
+<div class="alert alert-info">
+Your turn. Modify the function to take different kinds of business. 
 
+You can also add a category of business to search for from the [list](https://www.yelp.com/developers/documentation/v2/category_list) of acceptable values. 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">chapel_hill_restaurants</span> <span class="o">=</span> <span class="n">get_yelp_businesses</span><span class="p">(</span><span class="s1">&#39;Chapel Hill, NC&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">business</span> <span class="ow">in</span> <span class="n">chapel_hill_restaurants</span><span class="p">[</span><span class="s1">&#39;businesses&#39;</span><span class="p">]:</span>
-    <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">business</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span> <span class="n">business</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">business</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">])</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-info">
+Your turn. Sign up to be a developer on Twitter. Figure out the next steps...
 </div>
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">beverly_hills_restaurants</span> <span class="o">=</span> <span class="n">get_yelp_businesses</span><span class="p">(</span><span class="s1">&#39;90210&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">business</span> <span class="ow">in</span> <span class="n">beverly_hills_restaurants</span><span class="p">[</span><span class="s1">&#39;businesses&#39;</span><span class="p">]:</span>
-    <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">business</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span> <span class="n">business</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">business</span><span class="p">[</span><span class="s1">&#39;review_count&#39;</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pwd</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
